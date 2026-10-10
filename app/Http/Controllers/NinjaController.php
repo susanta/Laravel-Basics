@@ -49,7 +49,7 @@ class NinjaController extends Controller
 
       Ninja::create($validated);
 
-      return redirect()->route('ninjas.index');
+      return redirect()->route('ninjas.index')->with('success', 'Ninja created!');
 
     }
 
@@ -60,7 +60,7 @@ class NinjaController extends Controller
       $ninja = Ninja::findOrFail($id);
       $ninja->delete();
 
-      return redirect()->route('ninjas.index');
+      return redirect()->route('ninjas.index')->with('success', 'Ninja deleted!');;
     }
 
     // edit() and update() for edit view and update requests
