@@ -1,10 +1,6 @@
 <x-layout>
     <h2>Available Ninjas</h2>
 
-    @if ($greeting === 'hello')
-    <p>Hi from inside if statemnet</p>
-    @endif
-
     <ul>
         @foreach ($ninjas as $ninja)
         <li>
